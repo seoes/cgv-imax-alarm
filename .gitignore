@@ -1,4 +1,4 @@
 node_modules
 .env
-chatId.json
+/data
 dist

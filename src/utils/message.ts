@@ -1,10 +1,10 @@
 import { getDayOfWeek } from "./date";
 import { Schedule } from "../libs/scrap";
 
-export function createMovieScheduleMessage(result: Schedule) {
+export function createMovieScheduleMessage(result: Schedule): string {
     let str = "";
 
-    str += "오펜하이머 용산 아이맥스 예매오픈\n\n\n";
+    str += "오펜하이머 용아맥 오픈\n\n\n";
 
     result.forEach((day) => {
         str += `${day.date.getFullYear()}/`;
@@ -12,10 +12,10 @@ export function createMovieScheduleMessage(result: Schedule) {
         str += `${day.date.getDate()} `;
         str += `(${getDayOfWeek(day.date.getDay())})\n\n`;
 
-        day.info.forEach((play) => {
-            str += `${play.time.substring(0, 2)}:`;
-            str += `${play.time.substring(2, 4)} `;
-            str += `(잔여: ${play.seats})\n`;
+        day.info.forEach((info) => {
+            str += `${info.time.substring(0, 2)}:`;
+            str += `${info.time.substring(2, 4)} `;
+            str += `(잔여: ${info.seats})\n`;
         });
 
         str += "\n";

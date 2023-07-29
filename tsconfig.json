@@ -5,7 +5,12 @@
         "target": "ESNext",
         "moduleResolution": "node",
         "sourceMap": true,
-        "outDir": "dist"
+        "outDir": "dist",
+        "strict": true,
+        "noUnusedLocals": true,
+        "noUnusedParameters": true,
+        "noFallthroughCasesInSwitch": true,
+        "noImplicitReturns": true
     },
     "lib": ["ESNext"]
 }

@@ -1,0 +1,10 @@
+{
+    "tabWidth": 4,
+    "printWidth": 300,
+    "overrides": [
+        {
+            "files": "*.yaml",
+            "options": { "tabWidth": 2 }
+        }
+    ]
+}

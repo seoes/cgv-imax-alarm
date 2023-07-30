@@ -7,13 +7,18 @@ import { createMovieScheduleMessage } from "./utils/message";
 
 if (process.argv[2] === undefined && process.env.DATE === undefined) throw new Error("There's no date value");
 let date: string = process.argv[2] || process.env.DATE!;
+
+if (process.env.INTERVAL_TIME === undefined) throw new Error("There's no INTERVAL TIME value");
+const INTERVAL_TIME = parseInt(process.env.INTERVAL_TIME);
 const PORT = process.env.PORT;
 
 const app = express();
 
 telegramBot.startBot();
 
-setInterval(task, 10000);
+task();
+
+setInterval(task, INTERVAL_TIME);
 
 app.listen(PORT, async () => {
     console.log(`Server running on port ${PORT}`);

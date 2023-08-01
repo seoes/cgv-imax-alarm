@@ -10,7 +10,10 @@ export type Schedule = {
 }[];
 
 export default async function scrapMovieDatesAndTimes(targetDate: string): Promise<Schedule | []> {
-    const browser = await puppeteer.launch({ headless: "new" });
+    const browser = await puppeteer.launch({
+        headless: "new",
+        args: ["--no-sandbox"],
+    });
     const result: Schedule = [];
     try {
         const page = await browser.newPage();

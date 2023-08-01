@@ -19,7 +19,7 @@
 
 ## 실행 환경
 
--   Fedora 계열 Linux (Rocky Linux 9 권장)
+-   Docker를 이용한 배포 권장
 -   **.env**와 **data/chatId.json** 파일 설정 필수
 
 ## 문의

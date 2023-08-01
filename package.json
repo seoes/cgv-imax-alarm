@@ -7,7 +7,7 @@
         "build": "tsc",
         "dev": "nodemon ./src/index.ts",
         "test": "jest",
-        "run": "tsc && pm2 start dist/index.js"
+        "start": "ts-node ./src/index.ts"
     },
     "keywords": [],
     "author": "",
